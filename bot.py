@@ -182,7 +182,7 @@ async def roll(ctx):
 @commands.cooldown(1, 1800, BucketType.user)
 @client.command()
 async def search(ctx, *,search):
-	api_key = "AIzaSyByvb_gKd4XTUQEXD12lHPi7Bbhh9FRCjM"
+	api_key = ""
 	ressource = build("customsearch", 'v1', developerKey=api_key).cse()
 	result = ressource.list(q=search, cx='013543553084045992112:iq8yph27jiz').execute()
 	for item in result['items']:
@@ -191,7 +191,7 @@ async def search(ctx, *,search):
 #define
 @client.command()
 async def define(ctx, *, definition):
-	#api_key = "AIzaSyByvb_gKd4XTUQEXD12lHPi7Bbhh9FRCjM"
+	#api_key = ""
 	#ressource = build("customsearch", 'v1', developerKey=api_key).cse()
 	#result = ressource.list(q=definition, cx="013543553084045992112:nbzqsqza4p0").execute()
 	#for item in result['items']:
